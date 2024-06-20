@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatbot</title>
+    </head>
+    <body>
+        <h1>Chatbot</h1>
+        <form method="post">
+            {% csrf_token %}
+            <textarea name="question"></textarea>
+            <button type="submit">Ask</button>
+        </form>
+        {% if response %}
+        <p>Response: {{ response }}</p>
+        {% endif %}
+    </body>
+</html>
