@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+# Ajoutez cette ligne pour définir le port par défaut à 8000 si la variable d'environnement PORT n'est pas définie
+PORT = os.environ.get('PORT', 8000)
+
+# Configuration de la base de données et autres configurations...
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
